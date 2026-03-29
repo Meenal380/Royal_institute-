@@ -1,0 +1,78 @@
+<% layout("layouts/boilerplate") %>
+
+<style>
+  .hero-section {
+    min-height: 88vh;
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)),
+                url("https://c8.alamy.com/comp/2FNMWRT/online-learning-design-concept-top-view-of-student-table-with-computer-headphone-and-stationeries-on-blue-table-background-2FNMWRT.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+  }
+
+  .hero-content {
+    max-width: 700px;
+    padding: 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-top: 15px;
+  }
+
+  .hero-search {
+    max-width: 500px;
+    margin: 30px auto 0;
+  }
+</style>
+
+<!-- HERO SECTION -->
+<div class="hero-section">
+  <div class="hero-content">
+    <h1>Welcome to Royal Institute</h1>
+    <p>
+      Learn industry-ready skills with expert guidance. Build your future with us.
+    </p>
+
+    <form class="d-flex hero-search">
+      <input class="form-control me-2" type="search" placeholder="Search courses..." />
+      <button class="btn btn-search" type="submit">Search</button>
+    </form>
+  </div>
+</div>
+
+<!-- COURSES SECTION -->
+<div class="container my-5">
+  <h3 class="mb-4 fw-bold">Our Courses</h3>
+
+  <div class="row row-cols-lg-2 row-cols-md-2 row-cols-sm-1 g-4">
+    <% for (let listing of allListings) { %>
+      <div class="col">
+        <a href="/listings/<%= listing._id %>" class="listing-link text-dark">
+          <div class="card h-100 listing-card reveal">
+
+            <img src="<%= listing.image.url %>" class="card-img-top" alt="listing_image." />
+
+            <div class="card-body">
+              <p class="card-text">
+                <b><%= listing.title %></b>
+              </p>
+            </div>
+
+          </div>
+        </a>
+      </div>
+    <% } %>
+  </div>
+</div>
+

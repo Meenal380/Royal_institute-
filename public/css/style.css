@@ -1,0 +1,333 @@
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* IMPORTANT FIX */
+.container {
+    flex: 1;
+}
+
+/* Navbar */
+.navbar {
+    height: 4rem;
+    background-color: white;
+}
+
+.fa-compass {
+    font-size: 2rem;
+    color: #676565;
+}
+
+.fa-moon {
+    margin: 12px !important;
+}
+
+.fa-solid{
+    margin: 12px !important;
+}
+
+.nav-link {
+    color: #222222 !important;
+}
+
+/* Footer */
+.f-info-links a {
+    text-decoration: none;
+    color: #222222;
+}
+
+.f-info-links a:hover {
+    text-decoration: underline;
+}
+
+.f-info-links,
+.f-info-socials,
+.f-info-brand {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-info-socials i {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+.f-info {
+    text-align: center;
+    display: flex;
+    background-color: #ebebeb;
+    height: 8rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Cards */
+.card {
+    border: none !important;
+    border-radius: 2rem !important;
+    margin-bottom: 2rem;
+    background-color: rgb(245, 245, 245) !important;
+}
+
+
+.card:hover {
+  transform: translateY(-15px) scale(1.03) rotateX(2deg); 
+  box-shadow: 0px 30px 60px rgba(0,0,0,0.12); 
+  cursor: pointer;
+  z-index: 10; 
+}
+
+.card-img-top {
+    border-radius: 2rem !important;
+    width: 100% !important;
+    height: 20rem;
+    object-fit: cover !important;
+    padding: 15px;
+}
+
+.card-body {
+    padding: 0.5rem 0 !important;
+}
+
+.card-text {
+    font-weight: 400 !important;
+    text-align: center;
+}
+
+.card-show{
+    border: none !important;
+    border-radius: 2rem !important;
+    margin-bottom: 2rem;
+    background-color: rgb(245, 245, 245) !important;
+}
+.card-show-text{
+    text-align: left !important;
+}
+
+/* Listing link */
+.listing-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Card hover effect */
+.card-img-overlay {
+    opacity: 0;
+}
+
+.card-img-overlay:hover {
+    opacity: 0.2;
+    background-color: white;
+}
+
+/* Buttons */
+.add-btn,
+.edit-btn {
+    background-color: #fe424d !important;
+    border: none !important;
+}
+
+/* Show Page */
+.show-img {
+    height: 30vh;
+    object-fit: cover;
+}
+
+/* Review-cards */
+.review-card-body {
+    padding: 1rem !important;
+    border: 2px solid #ebebeb;
+    margin-bottom: 1rem;
+}
+
+/* curriculum and modules */
+.curriculum-box {
+  background: #dbd9d9 ;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+
+.curriculum-box ul {
+  padding-left: 1.2rem;
+  margin-top: 1rem;
+}
+
+.curriculum-box li {
+  margin-bottom: 0.6rem;
+}
+
+.modules-section {
+  margin-top: 3rem;
+}
+
+.module-card {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  /* border-bottom: 1px solid #ddd; */
+}
+
+.module-card h4 {
+  font-weight: 600;
+}
+
+.hero-section {
+  position: relative;
+  height: 100vh;
+  background-image: url("YOUR-IMAGE-URL-HERE");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+/* ========== CARD SIZE & SPACING ========== */
+
+.listing-card{
+    width: 97%;
+    margin: auto;
+    transition: 0.3s ease;
+    margin-bottom: 40px;
+}
+
+.card-img-top{
+    height: 18rem !important;
+    object-fit: cover !important;
+}
+
+.row-cols-lg-3 > .col,
+.row-cols-md-2 > .col,
+.row-cols-sm-1 > .col{
+    padding: 0.6rem !important;
+}
+
+
+
+
+/* ========== DARK MODE PURE BLACK ========== */
+
+body.dark{
+    background-color: #000 !important;
+    color: #fff !important;
+}
+
+/* Navbar */
+body.dark .navbar{
+    background-color: #000 !important;
+    border-bottom: 1px solid #222;
+}
+
+body.dark .nav-link{
+    color: #fff !important;
+}
+
+/* Footer */
+body.dark .f-info{
+    background-color: #000 !important;
+    color: #fff !important;
+    border-top: 1px solid #222;
+}
+
+
+/* ========== DARK MODE CARD LOOK ========== */
+
+body.dark .listing-card{
+    background-color: #111 !important;
+    border: 1px solid #222;
+    transition: all 0.35s ease;
+}
+
+
+/* ========== GREY PREMIUM GLOW HOVER ========== */
+
+body.dark .listing-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 
+        0 0 10px rgba(200,200,200,0.25),
+        0 0 25px rgba(200,200,200,0.15),
+        0 0 40px rgba(200,200,200,0.1);
+}
+
+
+/* ========== SMOOTH TRANSITION ========== */
+
+body, .navbar, .listing-card, .f-info{
+    transition: all 0.4s ease;
+}
+
+/* ========== DARK MODE CARD BASE LOOK ========== */
+
+body.dark .listing-card{
+    background-color: #111 !important;
+    border: 1px solid #3a3a3a !important;   /* grey border always visible */
+    box-shadow: 0 0 8px rgba(180,180,180,0.12);  /* soft grey aura */
+    transition: all 0.35s ease;
+}
+
+
+/* ========== HOVER = MORE GLOW, SAME THEME ========== */
+
+body.dark .listing-card:hover{
+    transform: translateY(-8px);
+    border: 1px solid #8a8a8a !important;  /* little brighter grey */
+    box-shadow: 
+        0 0 12px rgba(200,200,200,0.25),
+        0 0 30px rgba(200,200,200,0.15);
+}
+
+/* ========== DARK MODE CARD TEXT FIX ========== */
+
+body.dark .listing-card .card-text,
+body.dark .listing-card p,
+body.dark .listing-card span,
+body.dark .listing-card b,
+body.dark .listing-card h5 {
+    color: #ffffff !important;
+}
+
+
+/* ===== NAVBAR LINK HOVER BOX EFFECT ===== */
+
+.navbar .nav-link{
+    position: relative;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    color: inherit;
+}
+
+/* box appear on hover */
+.navbar .nav-link:hover{
+    background: linear-gradient(145deg, #2c2c2c, #1a1a1a);
+    color: #fff !important;
+    box-shadow: 0 0 10px rgba(255,255,255,0.15);
+}
+
+body.dark-mode .navbar .nav-link:hover{
+    background: linear-gradient(145deg, #3a3a3a, #111);
+    color: #fff !important;
+    box-shadow: 0 0 12px rgba(255,255,255,0.25);
+}
+
+.theme-toggle{
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+body.dark-mode .theme-toggle{
+    color: #fff;
+}
+
+.curriculum-box h3,
+.curriculum-box li {
+  color: black !important;
+}
+
+

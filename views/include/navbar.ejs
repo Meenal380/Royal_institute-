@@ -1,0 +1,67 @@
+<style>
+    .btn-search {
+        --bs-btn-color: #fffcfc;
+        --bs-btn-border-color: #fefafa;
+        --bs-btn-hover-color: #fff;
+        --bs-btn-hover-bg: #0b0b0c;
+        --bs-btn-hover-border-color: #000;
+        --bs-btn-focus-shadow-rgb: 25, 135, 84;
+        --bs-btn-active-color: #fff;
+        --bs-btn-active-bg: #5783b5;
+        --bs-btn-active-border-color: #5783b5;
+        --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+        --bs-btn-disabled-color: #101111;
+        --bs-btn-disabled-bg: transparent;
+        --bs-btn-disabled-border-color: #1e1f20;
+        --bs-gradient: none;
+        --bs-background-color: #5783b5;
+        border-radius: 10px;
+    }
+
+    .btn-search i {
+        display: inline;
+        margin-right: 0.5rem;
+    }
+</style>
+
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+    <div class="container-fluid">
+
+        <!-- Left -->
+        <a class="navbar-brand" href="/listings">
+            <i class="fa-regular fa-compass"></i>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+            <!-- Explore -->
+            <div class="navbar-nav">
+                <a class="nav-link" href="/listings"><b>Explore</b></a>
+            </div>
+
+            <!-- Right Side -->
+            <div class="navbar-nav ms-auto">
+
+                <% if(locals.currentUser && locals.currentUser.isAdmin) { %>
+                    <a class="nav-link" href="/listings/new">Add New Course</a>
+                <% } %>
+
+                <% if(!locals.currentUser) { %>
+                    <a class="nav-link" href="/signup"><b>Sign up</b></a>
+                    <a class="nav-link" href="/login"><b>Log in</b></a>
+                <% } %>
+
+                <% if(locals.currentUser) { %>
+                    <a class="nav-link" href="/logout"><b>Log out</b></a>
+                <% } %>
+
+                <i id="themeToggle" class="fa-solid fa-moon ms-3 theme-toggle"></i>
+            </div>
+
+        </div>
+    </div>
+</nav>
