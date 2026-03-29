@@ -21,12 +21,12 @@ main()
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.log(err));
 
-// ================== VIEW ENGINE ==================  ← MOVE UP
+// ================== VIEW ENGINE ==================
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.engine("ejs", ejsMate);
 
-// ================== MIDDLEWARE ==================  ← ALL TOGETHER, BEFORE ROUTES
+// ================== MIDDLEWARE ==================
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 app.use(express.static(path.join(__dirname, "public")));
@@ -36,11 +36,10 @@ const store = MongoStore.create({
   crypto: { secret: process.env.SECRET },
   touchAfter: 24 * 3600,
 });
-store.on("error", (e) => console.log("SESSION STORE ERROR", e));
 
 const sessionOptions = {
   store,
- secret: process.env.SECRET || "fallbacksecret",      // ← use env variable, not hardcoded
+  secret: process.env.SECRET || "fallbacksecret",
   resave: false,
   saveUninitialized: true,
   cookie: {
@@ -56,12 +55,11 @@ app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
 
-
 passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-// ← This MUST come after passport, before routes
+// locals
 app.use((req, res, next) => {
   res.locals.success = req.flash("success");
   res.locals.error = req.flash("error");
@@ -69,7 +67,7 @@ app.use((req, res, next) => {
   next();
 });
 
-// ================== ROUTES ==================  ← AFTER all middleware
+// ================== ROUTES ==================
 const listingRoutes = require("./routes/listing.js");
 const reviewRoutes = require("./routes/review.js");
 const userRoutes = require("./routes/user.js");
@@ -83,10 +81,15 @@ app.use("/", userRoutes);
 app.use((req, res, next) => {
   next(new ExpressError(404, "Page Not Found!"));
 });
+
 app.use((err, req, res, next) => {
   const { statusCode = 500, message = "Something went wrong!" } = err;
   res.status(statusCode).render("error.ejs", { message });
 });
 
 // ================== SERVER ==================
-app.listen(3000, () => console.log("Server is listening on port 3000"));
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => {
+  console.log(`Server is listening on port ${port}`);
+});
