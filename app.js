@@ -72,7 +72,9 @@ const listingRoutes = require("./routes/listing.js");
 const reviewRoutes = require("./routes/review.js");
 const userRoutes = require("./routes/user.js");
 
-app.get("/", (req, res) => res.send("Hi, I am root"));
+app.get("/", (req, res) => {
+  res.redirect("/listings");
+});
 app.use("/listings", listingRoutes);
 app.use("/listings/:id/reviews", reviewRoutes);
 app.use("/", userRoutes);
