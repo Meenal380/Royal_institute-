@@ -178,12 +178,16 @@ body {
 
 .hero-section {
   position: relative;
-  height: 100vh;
-  background-image: url("YOUR-IMAGE-URL-HERE");
+  min-height: 88vh;
+  width: 100%;
   background-size: cover;
   background-position: center;
   display: flex;
   align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  transition: background-image 1s ease-in-out;
 }
 
 /* ========== CARD SIZE & SPACING ========== */
