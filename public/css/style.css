@@ -85,7 +85,7 @@ body {
 .card-img-top {
     border-radius: 2rem !important;
     width: 100% !important;
-    height: 20rem;
+    height: 25rem;
     object-fit: cover !important;
     padding: 15px;
 }
@@ -200,7 +200,7 @@ body {
 }
 
 .card-img-top{
-    height: 18rem !important;
+    height: 300px !important;
     object-fit: cover !important;
 }
 
