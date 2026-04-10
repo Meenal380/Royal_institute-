@@ -170,66 +170,6 @@ const sampleListings = [
 ],
   },
   {
-    title: "HCOC",
-    description:
-      "HCOC stands for HKCL’s Career Oriented Course. HCOC series of courses serve as a bridge from college to careers. HKCL, under its HCOC brand, offers employability skills development modules as HCOC Certificate Courses. HCOC Courses are of 120 hours and 60 hours. HCOC Courses of 120 Hours are certified by HKCL and HSBTE.The focus of HCOC Courses is on knowledge-based skills for career development in diverse areas of the services sector. There are 28 HCOC Courses available under 10 sectors and those are Accounting, Back Office, Career Readiness, Designing, Digital Arts, Digital Freelancing, Hardware & Networking, Management, New Collar Jobs, and Programming.",
-    image: {
-      filename: "listingimage",
-      url: "https://hkcl.in/hcoc/img/HCOC.png",
-    },
-    price: 10000,
-    duration: "1 Year (528 Hours)",
-    curriculum: [
-  "Introduction to Computers & Operating System",
-  "Typing Skills & Keyboard Shortcuts",
-  "MS Word (Document Creation & Formatting)",
-  "MS Excel (Data Entry, Formulas, Charts)",
-  "MS PowerPoint (Presentations)",
-  "Internet & Email Usage",
-  "Digital Payments & Online Services",
-  "File Management & Data Handling",
-  "Basic Computer Maintenance",
-  "Cyber Security & Safe Practices",
-  "Office Work & Documentation Skills",
-  "Job Readiness & Communication Skills"
-],
-
-modules: [
-  {
-    title: "Module 1 — Computer Fundamentals",
-    description: "Basics of computers, operating systems, input/output devices, and understanding how a computer works."
-  },
-  {
-    title: "Module 2 — Typing & Productivity",
-    description: "Improving typing speed, learning keyboard shortcuts, and increasing overall work efficiency."
-  },
-  {
-    title: "Module 3 — MS Word",
-    description: "Creating, editing, and formatting documents, letters, and reports using Microsoft Word."
-  },
-  {
-    title: "Module 4 — MS Excel",
-    description: "Working with spreadsheets, formulas, data entry, and creating charts for analysis."
-  },
-  {
-    title: "Module 5 — MS PowerPoint",
-    description: "Designing presentations with slides, animations, and visual elements."
-  },
-  {
-    title: "Module 6 — Internet & Email",
-    description: "Browsing, searching information, sending emails, and using online services."
-  },
-  {
-    title: "Module 7 — Office Work & Data Handling",
-    description: "File management, documentation, and handling daily office tasks efficiently."
-  },
-  {
-    title: "Module 8 — Cyber Security & Job Skills",
-    description: "Safe internet practices, data protection, and preparing for job roles like computer operator."
-  }
-],
-  },
-  {
     title: "Data Structure and Algorithm",
     description:
       "Learn the fundamentals of data structures and algorithms to write efficient, optimized, and scalable code. This course covers core concepts like arrays, linked lists, stacks, queues, trees, graphs, and sorting techniques, helping you build strong problem-solving skills for real-world applications.",
